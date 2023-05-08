@@ -6,8 +6,8 @@
   --light-dark: 0 0% 13%;
   --dark: 359 100% 0%;
   --white: 0 0% 100%;
-  --red:0 100% 50%;
-  --custom-bg:0 100% 30%;
+  --red: 0 100% 50%;
+  --custom-bg: 0 100% 30%;
 
   /* FONT-SIZES */
   --fs-900: 9.375rem;
@@ -52,7 +52,7 @@ picture {
 body {
   line-height: 1.5;
   min-height: 100vh;
-  background-color: hsl(var(--light-dark))
+  background-color: hsl(var(--light-dark));
 }
 
 /* make images easier to work with */
@@ -257,20 +257,14 @@ header > :last-child {
 }
 .hero-section::before {
   /* background-color: rgb(144, 9, 31); */
-  background-image: linear-gradient(
-    45deg, 
-    #12c2e9, 
-    #c471ed, 
-    #f64f59
-  );
+  background-image: linear-gradient(45deg, #12c2e9, #c471ed, #f64f59);
   width: 49.8%;
-
 }
 .hero-section::after {
-  background-color: hsl(var(--custom-bg));     
- 
+  background-color: hsl(var(--custom-bg));
+
   /* border: 2px solid hsl(var(--custom-bg)/.4);      */
-  box-shadow: 5px 5px 0px 6px hsl(var(--custom-bg));     
+  box-shadow: 5px 5px 0px 6px hsl(var(--custom-bg));
   width: 50%;
   left: 51%;
   height: 97%;
@@ -280,8 +274,8 @@ header > :last-child {
 
 .first-section-div::after {
   content: " ";
-  background-color: hsl(var(--custom-bg));  
-  
+  background-color: hsl(var(--custom-bg));
+
   position: absolute;
   width: 20vw;
   height: 100%;
@@ -299,14 +293,13 @@ header > :last-child {
   -webkit-mask-image: url(img/svgs/leftsided-triangle.svg);
   mask-image: url(img/svgs/leftsided-triangle.svg);
 }
-.first-section-image-container>img{
-    position: absolute;
-    height: 100%;
-    object-fit: cover;
-    left: 40%;
-    /* margin-inline: 4rem; */
-    /* box-shadow: 5px 5px 5px 5px; */
-
+.first-section-image-container > img {
+  position: absolute;
+  height: 100%;
+  object-fit: cover;
+  left: 40%;
+  /* margin-inline: 4rem; */
+  /* box-shadow: 5px 5px 5px 5px; */
 }
 
 /* SECOND-SECTION */
