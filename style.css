@@ -216,9 +216,6 @@ select {
   /* grid-template-rows: 1fr 1fr; */
 }
 
-.primary-header {
-}
-
 .logo-div {
   justify-content: center;
   overflow: hidden;
@@ -245,6 +242,9 @@ header > :last-child {
 .nav-list > li > a {
   text-decoration: none;
   text-transform: uppercase;
+}
+.nav-button {
+  display: none;
 }
 
 /* sections */
@@ -376,4 +376,97 @@ header > :last-child {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* for small scrrens */
+@media (max-width: 35em) {
+  .primary-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Removing border effects */
+  .logo-div {
+    border: none;
+    margin-left: 3.3rem;
+  }
+  .logo-div > img {
+    border: none;
+  }
+  header > :last-child {
+    border: none;
+  }
+
+  .nav-list {
+    z-index: 1000;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    position: fixed;
+    inset: 0 0 0 20%;
+    background: hsla(0, 0%, 100%, 0.1);
+    backdrop-filter: blur(2rem);
+    transform: translateX(-200%);
+    transition: transform 350ms ease-out;
+  }
+  .nav-list[data-visible="true"] {
+    transform: translateX(-30%);
+  }
+  .nav-button {
+    display: block;
+    z-index: 9999;
+    position: absolute;
+    background: url(img/svgs/Group-of-rectangles.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+    border: none;
+    width: 5em;
+    aspect-ratio: 1;
+    left: -2rem;
+    overflow: hidden;
+  }
+  .nav-button[aria-expanded="true"] {
+    position: fixed;
+    background: url(img/svgs/Group-of-cross.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+
+  /* setting the positions of all li  */
+  .nav-list li {
+    position: absolute;
+    top: 20%;
+  }
+  .nav-list li:nth-child(2) {
+    top: 40%;
+  }
+  .nav-list li:nth-child(3) {
+    top: 60%;
+  }
+  .nav-list li:nth-child(4) {
+    top: 80%;
+  }
+
+  .first-section-image-container {
+    display: none;
+  }
+
+  .hero-section {
+    background-color: red;
+  }
+
+  .hero-section::before {
+    display: none;
+  }
+  .hero-section::after {
+    display: none;
+  }
+
+  .first-section-div::after {
+    display: none;
+  }
+  .first-section-div::before {
+    display: none;
+  }
 }
