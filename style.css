@@ -551,7 +551,7 @@ header > :last-child {
   }
 
   .hero-section {
-    background-color: red;
+    /* background-color: red; */
   }
 
   .hero-section::before {
