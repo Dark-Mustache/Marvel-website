@@ -650,3 +650,8 @@
     /* border: 2px solid rgb(58, 23, 211); */
 
   }
+  @media (max-width: 38em) {
+    .draw{
+      display: none;
+    }
+  }
